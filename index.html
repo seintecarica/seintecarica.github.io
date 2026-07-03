@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Quisbert— Portafolio Profesional</title>
+  <meta name="description"
+    content="Portafolio profesional de Rodrigo. Experiencia, proyectos destacados, tecnologías y contacto." />
+  <meta name="author" content="Rodrigo" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Devicon for tech logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="img/Perfil.png" alt="Rodrigo Quisbert" class="nav-avatar" />
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#experience" class="nav-link">Experiencia</a></li>
+        <li><a href="#projects" class="nav-link">Proyectos</a></li>
+        <li><a href="#tech" class="nav-link">Tecnologías</a></li>
+        <li><a href="#cv" class="nav-link">CV</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting animate-on-scroll">Hola, soy</p>
+      <h1 class="hero-name animate-on-scroll">Rodrigo Abdón Quisbert</h1>
+      <p class="hero-title animate-on-scroll">Ingeniero de Software &amp; Desarrollador Full Stack</p>
+      <p class="hero-subtitle animate-on-scroll">
+        Diseño y desarrollo soluciones digitales modernas, escalables y mantenibles, aplicando buenas prácticas de
+        ingeniería de software para crear productos de alta calidad.
+      </p>
+      <div class="hero-cta animate-on-scroll">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Ver Proyectos
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Contacto
+        </a>
+      </div>
+      <div class="hero-socials animate-on-scroll">
+        <a href="https://github.com/seintecarica" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/seintecarica/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">01.</span> Sobre mí
+      </h2>
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <p>
+            ¡Hola! Soy <strong>Rodrigo</strong>, un profesional apasionado por el desarrollo de software y la
+            creación de soluciones tecnológicas que aporten valor a las personas y a las organizaciones. Cuento con
+            experiencia en el desarrollo de aplicaciones web, participando tanto en el Back-end como en el Front-end,
+            además de la administración de bases de datos y la integración de servicios en la nube.
+          </p>
+          <p>
+            Mi enfoque se centra en escribir código limpio, mantenible y escalable. Disfruto aprender
+            nuevas tecnologías y aplicar las mejores prácticas de la industria en cada proyecto.
+          </p>
+          <p>
+            También he ampliado mis conocimientos en ingeniería de datos y Machine Learning, desarrollando proyectos con
+            Databricks y aplicando conceptos de MLOps para la automatización del ciclo de vida de modelos.
+          </p>
+        </div>
+        <div class="about-highlights animate-on-scroll">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-code"></i></div>
+            <h3>+15 años</h3>
+            <p>de experiencia</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>+10 proyectos</h3>
+            <p>completados</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Ingeniero Civil en Computación e Informática</h3>
+            <p>formación profesional</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">02.</span> Experiencia
+      </h2>
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Webmaster</h3>
+              <span class="timeline-company">Adevcom</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2025 — May 2026</span>
+            <ul class="timeline-details">
+              <li>Administración y mantenimiento del sitio web del Instituto de Seguridad Laboral (ISL) desarrollado en
+                WordPress utilizando Elementor Pro, ACF y Custom Post Types (CPT).</li>
+              <li>Gestión y publicación de contenidos para el sitio web, Campus Prevención y la Intranet institucional.
+              </li>
+              <li>Reducción del 40% en tiempos de despliegue mediante pipelines CI/CD.</li>
+              <li>Integración de APIs para el servicio de tramitación del ISL.</li>
+              <li>Automatización del proceso de inscripción masiva de usuarios en Campus Prevención.</li>
+              <li>Implementación y publicación de reportes Power BI dentro de la Intranet institucional.</li>
+              <li>Diseño e implementación de pipelines CI/CD en GitLab para automatizar el despliegue entre diferentes
+                entornos.</li>
+              <li>Participación en el desarrollo del nuevo sitio web del Ministerio de Agricultura (MINAGRI) utilizando
+                WordPress CMS.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Wordpress</span>
+              <span class="tag">Elementor</span>
+              <span class="tag">Liferay</span>
+              <span class="tag">Moodle</span>
+              <span class="tag">Php</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 1 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Engineer</h3>
+              <span class="timeline-company">Niuro</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Dic 2024 — Jun 2025</span>
+            <ul class="timeline-details">
+              <li>Participé en el equipo de Ciencia de Datos implementando procesos estandarizados para el despliegue de
+                modelos de Machine Learning en Databricks para los proyectos <strong>BuyRecommendation</strong> y
+                <strong>AppraisalsAI</strong>.
+              </li>
+              <li>Migré pipelines de Machine Learning al framework <strong>MLOps Stack</strong> de Databricks,
+                estandarizando el ciclo de vida de los modelos.</li>
+              <li>Formé parte del proyecto <strong>Enderys</strong>, enfocado en la gestión documental y automatización
+                de flujos de trabajo mediante Agentes de Inteligencia Artificial.</li>
+              <li>Desarrollé dashboards de monitoreo de métricas y rendimiento desde el backend utilizando
+                <strong>Axiom</strong>.
+              </li>
+              <li>Implementé una aplicación en <strong>Python + Streamlit</strong> para visualizar métricas de uso y
+                comportamiento de los usuarios de la plataforma.</li>
+              <li>Mantuve y evolucioné módulos del frontend desarrollados con <strong>Next.js (App Router)</strong>.
+              </li>
+              <li>Colaboré con equipos multidisciplinarios aplicando metodologías ágiles y buenas prácticas de
+                desarrollo de software.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Developer</h3>
+              <span class="timeline-company">Loyalti</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2024 — Oct 2024</span>
+            <ul class="timeline-details">
+              <li>Lideré la migración de cuatro aplicaciones empresariales a <strong>.NET Framework 4.8</strong>,
+                asegurando su compatibilidad y estabilidad para producción.</li>
+              <li>Desarrollé nuevos módulos y funcionalidades para dar respuesta a los requerimientos del negocio.</li>
+              <li>Modernicé aplicaciones deprecadas, mejorando su rendimiento y preparándolas para su despliegue en
+                ambientes productivos.</li>
+              <li>Diseñé e integré servicios <strong>SOAP</strong>, facilitando la comunicación entre aplicaciones y
+                sistemas externos.</li>
+              <li>Implementé integraciones entre el Front-end y los servicios backend utilizando <strong>AJAX</strong> y
+                <strong>Semantic UI</strong>.
+              </li>
+              <li>Trabajé con bases de datos <strong>SQL Server</strong> utilizando procedimientos almacenados y
+                consultas en <strong>T-SQL</strong>.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">.NET Framework</span>
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">T-SQL</span>
+              <span class="tag">AJAX</span>
+              <span class="tag">Semantic UI</span>
+              <span class="tag">SOAP</span>
+              <span class="tag">Responsive Web Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Developer</h3>
+              <span class="timeline-company">Desis</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Ene 2024 — Jun 2024</span>
+            <ul class="timeline-details">
+              <li>Participé en un equipo de desarrollo bajo la metodología <strong>Scrum</strong>, contribuyendo al
+                mantenimiento, mejora continua y desarrollo de nuevas funcionalidades para las plataformas
+                <strong>facturacion.desis.cl</strong> y <strong>facturacion.cl</strong>.
+              </li>
+              <li>Desarrollé nuevos módulos y realicé mejoras utilizando <strong>PHP nativo</strong>,
+                <strong>AJAX</strong> y <strong>CSS</strong>, manteniendo la estabilidad y evolución de las
+                aplicaciones.
+              </li>
+              <li>Implementé reportes utilizando <strong>iReport</strong> e integré la aplicación con bases de datos
+                <strong>PostgreSQL</strong>.
+              </li>
+              <li>Integré librerías especializadas en PHP para el procesamiento y gestión de documentos tributarios
+                electrónicos (DTE).</li>
+              <li>Fortalecí mis conocimientos en <strong>CSS</strong>, desarrollando interfaces responsivas y
+                mantenibles sin el uso de frameworks como Bootstrap o Tailwind CSS.</li>
+              <li>Colaboré con el equipo de desarrollo en la implementación de mejoras continuas, siguiendo buenas
+                prácticas de desarrollo y control de versiones.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">AJAX</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">CSS</span>
+              <span class="tag">iReport</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Developer</h3>
+              <span class="timeline-company">Universidad de Tarapacá</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Dic 2022 — Jul 2023</span>
+            <ul class="timeline-details">
+              <li>Diseñé, desarrollé y administré un sistema web de reserva de almuerzos para el casino de la
+                Universidad de Tarapacá.</li>
+              <li>Implementé la aplicación utilizando <strong>Laravel 10</strong>, aplicando migraciones y gestión de
+                base de datos con <strong>MySQL</strong>.</li>
+              <li>Desarrollé una interfaz responsiva alineada con la identidad visual de la institución, garantizando
+                una experiencia de usuario intuitiva.</li>
+              <li>Incorporé gráficos estadísticos mediante <strong>Highcharts</strong> para la visualización de
+                información relevante.</li>
+              <li>Implementé la generación de documentos PDF utilizando <strong>DOMPDF</strong>.</li>
+              <li>Utilicé <strong>Bootstrap</strong> y <strong>AJAX</strong> para construir una interfaz dinámica y
+                mejorar la interacción con el usuario.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Laravel 10</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">AJAX</span>
+              <span class="tag">Responsive Web Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Centers Developer</h3>
+              <span class="timeline-company">NTTData</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jun 2020 — Nov 2022</span>
+            <ul class="timeline-details">
+              <li>Participé en el mantenimiento, optimización y evolución de más de 20 aplicaciones corporativas del
+                proyecto <strong>Intranet</strong>, garantizando su continuidad operativa y mejora continua.</li>
+              <li>Desarrollé nuevas funcionalidades para el Sistema de Historia Clínica Electrónica de <strong>Clínica
+                  Alemana</strong>, contribuyendo a la evolución de una plataforma crítica para el sector salud.</li>
+              <li>Colaboré en el desarrollo y mejora de módulos para el Sistema Fiduciario Nacional del <strong>Banco
+                  Interamericano de Desarrollo (BID)</strong>, participando en proyectos de alta complejidad.</li>
+              <li>Desarrollé soluciones utilizando <strong>ASP.NET</strong>, <strong>.NET Core</strong>,
+                <strong>WPF</strong>, <strong>Angular</strong> y <strong>jQuery</strong>, integrando bases de datos
+                <strong>SQL Server</strong> y <strong>Oracle</strong>.
+              </li>
+              <li>Participé en la implementación de procesos <strong>CI/CD</strong> utilizando <strong>Microsoft Azure
+                  DevOps</strong>, automatizando el ciclo de vida de las aplicaciones.</li>
+              <li>Trabajé bajo metodología <strong>Scrum</strong>, utilizando herramientas como <strong>Jira</strong> y
+                <strong>Confluence</strong> para la planificación, seguimiento y colaboración con equipos
+                multidisciplinarios.
+              </li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">ASP.NET</span>
+              <span class="tag">.NET Core</span>
+              <span class="tag">WPF</span>
+              <span class="tag">Angular</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">Oracle</span>
+              <span class="tag">Microsoft Azure DevOps</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Confluence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Developer</h3>
+              <span class="timeline-company">Testcontrol</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Ago 2019 — Feb 2020</span>
+            <ul class="timeline-details">
+              <li>Participé como analista y desarrollador en el diseño e implementación de un Sistema de Valorización de
+                Informes de Ensayo.</li>
+              <li>Desarrollé nuevos módulos que automatizaron los procesos de Solicitud de Servicios, Cotizaciones y
+                Estados de Pago, optimizando la gestión operativa de la organización.</li>
+              <li>Implementé la lógica de negocio utilizando <strong>.NET Framework (C#)</strong>, garantizando una
+                solución robusta y mantenible.</li>
+              <li>Diseñé y desarrollé reportes mediante <strong>Report Designer</strong>, facilitando la generación de
+                información para los usuarios del sistema.</li>
+              <li>Integré la aplicación con bases de datos <strong>MySQL</strong>, implementando consultas y
+                procedimientos para la gestión eficiente de la información.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">.NET Framework (C#)</span>
+              <span class="tag">Report Designer</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Developer</h3>
+              <span class="timeline-company">Constructora Grupo Norte</span>
+            </div>
+            <span class="timeline-date"><i class="far fa-calendar-alt"></i> Ene 2014 — Feb 2019</span>
+            <ul class="timeline-details">
+              <li>Participé como analista y desarrollador en el diseño e implementación de un Sistema de Adquisiciones,
+                Bodega y Gestión de Contratos para optimizar los procesos internos de la empresa.</li>
+              <li>Desarrollé la primera versión del sistema utilizando <strong>PowerBuilder</strong> junto con una
+                aplicación web responsiva para complementar las operaciones.</li>
+              <li>Participé en la migración y modernización de la solución hacia una aplicación de escritorio
+                desarrollada con <strong>.NET Framework 4.6 (WinForms)</strong>, mejorando su rendimiento y
+                mantenibilidad.</li>
+              <li>Implementé nuevas funcionalidades utilizando <strong>Yii Framework</strong>, integrando la aplicación
+                con bases de datos <strong>SQL Server 2012</strong>.</li>
+              <li>Desplegué la solución en un servidor local con acceso remoto, permitiendo su utilización por las
+                distintas obras y sucursales de la empresa a nivel nacional.</li>
+              <li>Colaboré en el mantenimiento y evolución continua del sistema, adaptándolo a los nuevos requerimientos
+                operacionales de la organización.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">PowerBuilder</span>
+              <span class="tag">.NET Framework</span>
+              <span class="tag">Yii Framework</span>
+              <span class="tag">SQL Server 2012</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">03.</span> Proyectos Destacados
+      </h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card animate-on-scroll" id="project-1">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" target="_blank" class="project-link" aria-label="Ver proyecto">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>MLOps Pipeline</h3>
+            <p>Pipeline end-to-end de Machine Learning con entrenamiento automático, Feature Store, monitoreo de modelos
+              y despliegue continuo.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Databricks</span><span>MLflow</span><span>CI/CD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card animate-on-scroll" id="project-2">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" target="_blank" class="project-link" aria-label="Ver proyecto">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Dashboard Analítico</h3>
+            <p>Aplicación web interactiva para visualización de datos en tiempo real con gráficos dinámicos y reportes
+              automatizados.</p>
+            <div class="project-tags">
+              <span>React</span><span>D3.js</span><span>Node.js</span><span>WebSocket</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card animate-on-scroll" id="project-3">
+          <div class="project-image">
+            <div class="project-image-placeholder">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" target="_blank" class="project-link" aria-label="Ver proyecto">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce Platform</h3>
+            <p>Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos, gestión de
+              inventario y panel de administración.</p>
+            <div class="project-tags">
+              <span>Next.js</span><span>Stripe</span><span>PostgreSQL</span><span>Tailwind</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TECHNOLOGIES ═══════════════════ -->
+  <section class="section section-alt" id="tech">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">04.</span> Tecnologías
+      </h2>
+      <p class="section-subtitle animate-on-scroll">Herramientas y tecnologías con las que trabajo</p>
+      <div class="tech-grid animate-on-scroll">
+
+        <div class="tech-item">
+          <i class="devicon-python-plain colored"></i>
+          <span>Python</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-javascript-plain colored"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-typescript-plain colored"></i>
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-nodejs-plain colored"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-html5-plain colored"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-css3-plain colored"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-docker-plain colored"></i>
+          <span>Docker</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+          <span>AWS</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-git-plain colored"></i>
+          <span>Git</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-postgresql-plain colored"></i>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-django-plain colored"></i>
+          <span>Django</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-linux-plain colored"></i>
+          <span>Linux</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-laravel-original colored"></i>
+          <span>Laravel</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-dotnetcore-plain colored"></i>
+          <span>.NET</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-vuejs-plain colored"></i>
+          <span>Vue.js</span>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-microsoftsqlserver-plain colored"></i>
+          <span>SQL Server</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CV ═══════════════════ -->
+  <section class="section" id="cv">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">05.</span> Currículum Vitae
+      </h2>
+      <div class="cv-section animate-on-scroll">
+        <div class="cv-card">
+          <div class="cv-icon">
+            <i class="fas fa-file-pdf"></i>
+          </div>
+          <h3>Descarga mi CV</h3>
+          <p>
+            Conoce más sobre mi formación académica, experiencia profesional, certificaciones y habilidades técnicas.
+          </p>
+          <a href="assets/CV-Rodrigo Abdon Quisbert Fernandez.pdf" download class="btn btn-primary btn-lg">
+            <i class="fas fa-download"></i> Descargar CV (PDF)
+          </a>
+          <p class="cv-note">
+            <i class="fas fa-sync-alt"></i> Última actualización: Julio 2026
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">06.</span> Contacto
+      </h2>
+      <p class="section-subtitle animate-on-scroll">
+        ¿Tienes un proyecto en mente o quieres colaborar? ¡Escríbeme!
+      </p>
+
+      <div class="contact-grid">
+        <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/xwvdaown"
+          method="POST">
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Enviar mensaje
+          </button>
+        </form>
+
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <a href="mailto:seintecarica@gmail.com">seintecarica@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+            <h4>LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/seintecarica/" target="_blank"
+              rel="noopener">https://www.linkedin.com/in/seintecarica/</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/seintecarica" target="_blank" rel="noopener">https://github.com/seintecarica</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Ubicación</h4>
+            <p>Arica, Chile</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">
+          <center><img src="img/Perfil.png" alt="Rodrigo Quisbert" class="nav-avatar" /></center>
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/seintecarica" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/seintecarica/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Rodrigo. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

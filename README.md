@@ -1,41 +1,60 @@
-Bienvenido a mi portafolio profesional.
+# Rodrigo — Portafolio Profesional
 
-Este sitio fue creado con el propósito de presentar mi experiencia, habilidades técnicas y proyectos desarrollados como Ingeniero Informático y Fullstack Developer. Aquí encontrarás una visión general de mi trayectoria profesional, las tecnologías con las que trabajo y algunos de los proyectos en los que he participado.
+Sitio web personal y portafolio profesional construido con HTML, CSS y JavaScript vanilla.
 
-Sobre mí
+## ✨ Características
 
-Soy Ingeniero Informático con experiencia en el desarrollo de aplicaciones web y soluciones tecnológicas, participando tanto en el desarrollo Back-end como Front-end. Me apasiona diseñar software de calidad, aprender nuevas tecnologías y enfrentar desafíos que contribuyan a la mejora de procesos y la creación de soluciones eficientes.
+- 🌙 **Modo claro/oscuro** con persistencia en localStorage
+- 📱 **Diseño responsive** adaptable a móviles y tablets
+- 🎨 **Diseño moderno** con glassmorphism, gradientes y micro-animaciones
+- ⌨️ **Efecto de escritura** en el título del hero
+- 📄 **Descarga de CV** en formato PDF
+- 💼 **Experiencia laboral** con timeline visual
+- 🚀 **Proyectos destacados** con tarjetas interactivas
+- 🛠️ **Tecnologías** con íconos de Devicon
+- 📬 **Formulario de contacto** (compatible con Formspree)
+- 🔗 **Enlaces a GitHub y LinkedIn**
 
-A lo largo de mi experiencia he trabajado con tecnologías como:
+## 📁 Estructura
 
-PHP
-Laravel
-JavaScript
-HTML y CSS
-Oracle Database
-MySQL
-PL/SQL
-AWS
-Linux
-Git y GitHub
+```
+├── index.html          # Página principal
+├── styles.css          # Estilos (temas claro/oscuro, responsive)
+├── script.js           # Interactividad (tema, menú, animaciones)
+├── assets/
+│   └── cv-rodrigo.pdf  # Tu CV en formato PDF
+└── README.md
+```
 
-Además, he ampliado mis conocimientos en tecnologías orientadas a datos y Machine Learning, desarrollando proyectos con Databricks y prácticas de MLOps.
+## 🚀 Despliegue en GitHub Pages
 
-Objetivo del sitio
+1. Sube este repositorio a GitHub.
+2. Ve a **Settings > Pages**.
+3. En **Source**, selecciona la rama `main` y la carpeta `/ (root)`.
+4. ¡Tu sitio estará disponible en `https://tu-usuario.github.io/`!
 
-Este portafolio tiene como finalidad reunir en un solo lugar mi información profesional, proyectos, experiencia, habilidades técnicas y formas de contacto, facilitando a reclutadores, empresas y colaboradores conocer mi trabajo.
+## ✏️ Personalización
 
-Contenido
+### Datos personales
+Edita `index.html` y reemplaza:
+- Tu nombre, título y descripción
+- URLs de GitHub y LinkedIn
+- Experiencia laboral, proyectos y tecnologías
+- Información de contacto (email, ubicación)
 
-En este sitio podrás encontrar:
+### Formulario de contacto
+Para que el formulario funcione:
+1. Crea una cuenta en [Formspree](https://formspree.io/)
+2. Reemplaza `TU_FORM_ID` en el `action` del formulario por tu ID de Formspree
 
-Información sobre mi perfil profesional.
-Tecnologías y herramientas que utilizo.
-Proyectos destacados.
-Experiencia y formación.
-Información de contacto.
-Estado del proyecto
+### CV
+Coloca tu CV en `assets/cv-rodrigo.pdf` (o cambia la ruta en el botón de descarga).
 
-Este portafolio se encuentra en constante actualización, incorporando nuevos proyectos, tecnologías y experiencias profesionales.
+## 📦 Tecnologías utilizadas
 
-¡Gracias por visitar mi portafolio!
+- HTML5 semántico
+- CSS3 (Custom Properties, Flexbox, Grid, Animaciones)
+- JavaScript vanilla (ES6+)
+- [Google Fonts — Inter](https://fonts.google.com/specimen/Inter)
+- [Font Awesome 6](https://fontawesome.com/)
+- [Devicon](https://devicon.dev/)
