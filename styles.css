@@ -643,6 +643,88 @@ ul {
   font-size: 1.02rem;
 }
 
+/* ── Profile Photo in About Section ── */
+.about-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.about-photo-ring {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* Gradient border trick: 4px gap + 6px accent ring */
+  box-shadow:
+    0 0 0 5px var(--bg-primary),
+    0 0 0 9px var(--accent-1),
+    0 16px 48px rgba(79, 70, 229, 0.22);
+  animation: ring-pulse 3.5s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* Rotating dashed ring #1 */
+.about-photo-ring::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  border: 2px dashed var(--accent-2);
+  opacity: 0.45;
+  animation: ring-spin 14s linear infinite;
+  pointer-events: none;
+}
+
+/* Rotating dashed ring #2 */
+.about-photo-ring::after {
+  content: '';
+  position: absolute;
+  inset: -28px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--accent-1);
+  opacity: 0.2;
+  animation: ring-spin 22s linear infinite reverse;
+  pointer-events: none;
+}
+
+/* Inner clip: this is what makes the image truly circular */
+.about-photo-clip {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+@keyframes ring-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 5px var(--bg-primary),
+      0 0 0 9px var(--accent-1),
+      0 8px 32px rgba(79, 70, 229, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 0 0 5px var(--bg-primary),
+      0 0 0 9px var(--accent-2),
+      0 20px 55px rgba(79, 70, 229, 0.35);
+  }
+}
+
+@keyframes ring-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
 .about-text strong {
   color: var(--accent-2);
   font-weight: 600;
