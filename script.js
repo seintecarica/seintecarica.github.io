@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const current = titles[titleIndex];
 
       if (isDeleting) {
-        heroTitle.textContent = current.substring(0, charIndex - 1);
+        heroTitle.textContent = current.substring(0, charIndex - 1) || '\u00A0';
         charIndex--;
       } else {
         heroTitle.textContent = current.substring(0, charIndex + 1);

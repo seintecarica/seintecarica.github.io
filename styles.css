@@ -336,7 +336,7 @@ ul {
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 0 24px;
+  padding: 100px 24px 40px;
 }
 
 .hero-bg-shapes {
@@ -417,12 +417,14 @@ ul {
 .hero-name {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.15;
   background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 16px;
+  padding-bottom: 0.1em;
+  /* Evita que descendentes (g, p, y) sean recortados */
   background-size: 200% 200%;
   animation: gradient-shift 6s ease infinite;
 }
@@ -444,7 +446,32 @@ ul {
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 12px;
+  /* Reserva espacio fijo para evitar salto de layout al cambiar el texto */
+  min-height: 2.2em;
 }
+
+/* Cursor parpadeante del efecto typewriter */
+.hero-title::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--accent-2);
+  font-weight: 300;
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 
 .hero-subtitle {
   font-size: 1.05rem;
@@ -705,12 +732,15 @@ ul {
 }
 
 @keyframes ring-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow:
       0 0 0 5px var(--bg-primary),
       0 0 0 9px var(--accent-1),
       0 8px 32px rgba(79, 70, 229, 0.18);
   }
+
   50% {
     box-shadow:
       0 0 0 5px var(--bg-primary),
@@ -720,8 +750,13 @@ ul {
 }
 
 @keyframes ring-spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -1447,6 +1482,58 @@ margin-bottom: 14px;
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ── Hero elements: animación CSS pura, sin depender del observer ── */
+/* Se sobreescribe el estado inicial para que no haya flash al cargar */
+.hero .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(0);
+  /* Sin desplazamiento: evita el salto */
+  animation: hero-fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.hero .animate-on-scroll:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.hero .animate-on-scroll:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.hero .animate-on-scroll:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.hero .animate-on-scroll:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.hero .animate-on-scroll:nth-child(5) {
+  animation-delay: 0.7s;
+}
+
+.hero .animate-on-scroll:nth-child(6) {
+  animation-delay: 0.85s;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Una vez que el observer añade .visible al hero, ya está animado, no hacer nada */
+.hero .animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
 }
 
 /* Stagger children */
