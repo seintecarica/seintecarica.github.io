@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function getPreferredTheme() {
     const saved = localStorage.getItem(THEME_KEY);
     if (saved) return saved;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return 'light';
   }
 
   function setTheme(theme) {
@@ -30,13 +30,55 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem(THEME_KEY, theme);
   }
 
-  // Initialize theme
+  // Inicializar tema (claro por defecto la primera vez)
   setTheme(getPreferredTheme());
 
   themeToggle.addEventListener('click', () => {
     const current = html.getAttribute('data-theme');
     setTheme(current === 'dark' ? 'light' : 'dark');
   });
+
+  // ═══════════════════════════════════════════
+  // 1.5. ACCORDION (Experiencia)
+  // ═══════════════════════════════════════════
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.parentElement;
+      const isActive = item.classList.contains('active');
+
+      // (Opcional) si se desea cerrar los otros bloques al abrir uno nuevo:
+      // document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+
+      if (isActive) {
+        item.classList.remove('active');
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════
+  // 1.6. TECH SLIDER CONTROLS (Manual Arrows + Auto Scroll)
+  // ═══════════════════════════════════════════════════════
+  const techWrapper = document.getElementById('techSliderWrapper');
+  const techPrevBtn = document.getElementById('techPrevBtn');
+  const techNextBtn = document.getElementById('techNextBtn');
+
+  if (techWrapper && techPrevBtn && techNextBtn) {
+    const scrollAmount = 322; // Avance de 2 tarjetas por clic (145px + 16px gap)*2
+
+    techNextBtn.addEventListener('click', () => {
+      techWrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    techPrevBtn.addEventListener('click', () => {
+      techWrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+  }
 
   // ═══════════════════════════════════════════
   // 2. MOBILE MENU
