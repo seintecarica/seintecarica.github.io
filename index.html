@@ -38,6 +38,9 @@
   <!-- Devicon for tech logos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
 
+  <!-- PDF.js para previsualización directa de PDFs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -164,11 +167,319 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ CERTIFICATES ═══════════════════ -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">
+        <span class="section-number">02.</span> Certificados
+      </h2>
+      <p class="section-subtitle animate-on-scroll">Documentos y certificaciones profesionales. Haz clic en cualquier
+        certificado para ver la previsualización directa en PDF o abrir el documento oficial.</p>
+
+      <div class="cert-slider-outer animate-on-scroll">
+        <button class="cert-slider-btn prev" id="certPrevBtn" aria-label="Anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="cert-slider-wrapper" id="certSliderWrapper">
+          <div class="cert-slider-track" id="certSliderTrack">
+            <!-- First Set (16 certificates) -->
+            <div class="cert-card"
+              data-pdf="assets/certificates/Certificado-Angular-17-Creacion-de-aplicaciones-web.pdf"
+              data-title="Certificado - Angular 17 - Creación de aplicaciones web"
+              data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Angular-17-Creacion-de-aplicaciones-web.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Angular 17 - Creación de aplicaciones web</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificación Profesional</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-APIRest-con-Net.pdf"
+              data-title="Certificado 02" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-APIRest-con-Net.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado APIRest con .Net</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-APIRest-con-Net.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Backend-con-NestJS.pdf"
+              data-title="Certificado 03" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-Backend-con-NestJS.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Backend con NestJS</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Backend-con-NestJS.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Consumo-de-APIs-REST-con-Angular.pdf"
+              data-title="Certificado 04" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Consumo-de-APIs-REST-con-Angular.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Consumo de APIs REST con Angular</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Consumo-de-APIs-REST-con-Angular.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card"
+              data-pdf="assets/certificates/Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf"
+              data-title="Certificado 05" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso de Angular Componentes y Servicios</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-Api-Rest-con-Laravel.pdf"
+              data-title="Certificado 06" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Curso-de-Api-Rest-con-Laravel.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso de Api Rest con Laravel</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Curso-de-Api-Rest-con-Laravel.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Angular.pdf"
+              data-title="Certificado 07" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Angular.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso de Fundamentos de Angular</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Curso-de-Fundamentos-de-Angular.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card"
+              data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot.pdf"
+              data-title="Certificado 08" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso de Fundamentos de Java Spring Boot</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot .pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-introduccion-a-Laravel-9.pdf"
+              data-title="Certificado 09" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Curso-de-introduccion-a-Laravel-9.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso de Introduccion a Laravel 9</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Curso-de-introduccion-a-Laravel-9.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-Postgresql.pdf"
+              data-title="Certificado 10" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-Curso-de-Postgresql.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso de Postgresql</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Curso-de-Postgresql.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-profesional-de-Git-y-Github.pdf"
+              data-title="Certificado 11" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Curso-profesional-de-Git-y-Github.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Curso Profesional de Git y Github</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Curso-profesional-de-Git-y-Github.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Fundamentos-de-Docker.pdf"
+              data-title="Certificado 12" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Fundamentos-de-Docker.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Fundamentos de Docker</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Fundamentos-de-Docker.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Fundamentos-de-NodeJS.pdf"
+              data-title="Certificado 13" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Fundamentos-de-NodeJS.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Fundamentos de NodeJS</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Fundamentos-de-NodeJS.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Introduccion-a-Laravel.pdf"
+              data-title="Certificado 14" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Introduccion-a-Laravel.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Introduccion a Laravel</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Introduccion-a-Laravel.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card"
+              data-pdf="assets/certificates/Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf"
+              data-title="Certificado 15" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas"
+                  data-pdf="assets/certificates/Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Manejo de datos en Laravel con Eloquent ORM</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
+                  Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+            <div class="cert-card" data-pdf="assets/certificates/Certificado-Modulos-con-NestJS.pdf"
+              data-title="Certificado 16" data-issuer="Certificación Profesional" data-year="2024">
+              <div class="cert-thumb-wrapper">
+                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-Modulos-con-NestJS.pdf"></canvas>
+                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
+                <div class="cert-overlay">
+                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
+                </div>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-title">Certificado Módulos con NestJS</h4>
+                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Módulos-con-NestJS.pdf</span>
+                <span class="cert-badge">PDF</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="cert-slider-btn next" id="certNextBtn" aria-label="Siguiente">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
   <section class="section section-alt" id="experience">
     <div class="container">
       <h2 class="section-title animate-on-scroll">
-        <span class="section-number">02.</span> Experiencia
+        <span class="section-number">03.</span> Experiencia
       </h2>
       <div class="accordion-container">
         <!-- Experience Item 1 (Open by default) -->
@@ -540,7 +851,10 @@
       <h2 class="section-title animate-on-scroll">
         <span class="section-number">04.</span> Tecnologías
       </h2>
-      <p class="section-subtitle animate-on-scroll">A lo largo de mi trayectoria profesional he trabajado con un amplio conjunto de tecnologías, lenguajes de programación y herramientas de desarrollo, seleccionando las más adecuadas para construir soluciones seguras, escalables y orientadas a las necesidades de cada proyecto. Mi aprendizaje continuo me permite mantenerme actualizado e incorporar nuevas tecnologías cuando aportan valor al negocio.</p>
+      <p class="section-subtitle animate-on-scroll">A lo largo de mi trayectoria profesional he trabajado con un amplio
+        conjunto de tecnologías, lenguajes de programación y herramientas de desarrollo, seleccionando las más adecuadas
+        para construir soluciones seguras, escalables y orientadas a las necesidades de cada proyecto. Mi aprendizaje
+        continuo me permite mantenerme actualizado e incorporar nuevas tecnologías cuando aportan valor al negocio.</p>
       <div class="tech-slider-outer animate-on-scroll">
         <button class="tech-slider-btn prev" id="techPrevBtn" aria-label="Anterior">
           <i class="fas fa-chevron-left"></i>
@@ -701,6 +1015,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════════ CERTIFICATE MODAL LIGHTBOX ═══════════════════ -->
+  <div class="cert-modal" id="certModal" aria-hidden="true" role="dialog">
+    <div class="cert-modal-overlay" id="certModalOverlay"></div>
+    <div class="cert-modal-container">
+      <button class="cert-modal-close" id="certModalClose" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+      <div class="cert-modal-header">
+        <h3 id="certModalTitle">Título del Certificado</h3>
+        <p id="certModalSubtitle">Documento PDF</p>
+      </div>
+      <div class="cert-modal-body">
+        <iframe id="certModalIframe" src="" width="100%" height="460px"
+          style="border:none; border-radius: 8px; background: #0f172a;"></iframe>
+      </div>
+      <div class="cert-modal-footer">
+        <a href="#" id="certModalPdfBtn" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Abrir PDF en ventana completa
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

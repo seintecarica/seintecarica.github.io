@@ -62,6 +62,127 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ═══════════════════════════════════════════════════════
+  // 1.5.5. CERTIFICATES SLIDER & PDF.JS PREVIEWS
+  // ═══════════════════════════════════════════════════════
+  const certTrack = document.getElementById('certSliderTrack');
+  const certPrevBtn = document.getElementById('certPrevBtn');
+  const certNextBtn = document.getElementById('certNextBtn');
+
+  // — Clone cards for infinite loop (keeps HTML with only 16 cards) —
+  if (certTrack) {
+    const originalCards = Array.from(certTrack.children);
+    originalCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true'); // decorative duplicate
+      certTrack.appendChild(clone);
+    });
+  }
+
+  // — Pause/resume on hover (CSS handles :hover, but also support buttons) —
+  if (certPrevBtn && certNextBtn && certTrack) {
+    certPrevBtn.addEventListener('click', () => {
+      certTrack.classList.toggle('paused');
+    });
+    certNextBtn.addEventListener('click', () => {
+      certTrack.classList.toggle('paused');
+    });
+  }
+
+  // Renderizado dinámico de la 1ª página de cada PDF con PDF.js en el canvas
+  if (window.pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    // Only select canvases inside original (non-cloned) cards
+    const originalCertCards = certTrack
+      ? Array.from(certTrack.querySelectorAll('.cert-card:not([aria-hidden]) .cert-canvas'))
+      : [];
+
+    originalCertCards.forEach((canvas, idx) => {
+      const pdfUrl = canvas.getAttribute('data-pdf');
+      if (!pdfUrl) return;
+
+      pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+        pdf.getPage(1).then(page => {
+          const viewport = page.getViewport({ scale: 0.5 });
+          const context = canvas.getContext('2d');
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          const renderContext = { canvasContext: context, viewport: viewport };
+          page.render(renderContext).promise.then(() => {
+            canvas.classList.add('rendered');
+
+            // Mirror the rendered image to the cloned card's canvas
+            const clonedCards = Array.from(certTrack.querySelectorAll('.cert-card[aria-hidden]'));
+            if (clonedCards[idx]) {
+              const cloneCanvas = clonedCards[idx].querySelector('.cert-canvas');
+              if (cloneCanvas) {
+                cloneCanvas.width = canvas.width;
+                cloneCanvas.height = canvas.height;
+                cloneCanvas.getContext('2d').drawImage(canvas, 0, 0);
+                cloneCanvas.classList.add('rendered');
+              }
+            }
+          });
+        });
+      }).catch(() => {
+        // Mantiene el icono representativo de PDF si el archivo aún no está subido
+      });
+    });
+  }
+
+  // Visor Modal Lightbox con iFrame interactivo
+  const certModal = document.getElementById('certModal');
+  const certModalOverlay = document.getElementById('certModalOverlay');
+  const certModalClose = document.getElementById('certModalClose');
+  const certModalTitle = document.getElementById('certModalTitle');
+  const certModalSubtitle = document.getElementById('certModalSubtitle');
+  const certModalIframe = document.getElementById('certModalIframe');
+  const certModalPdfBtn = document.getElementById('certModalPdfBtn');
+
+  function openCertModal(card) {
+    if (!certModal) return;
+    const title = card.getAttribute('data-title') || 'Certificado';
+    const issuer = card.getAttribute('data-issuer') || 'Documento PDF';
+    const pdfUrl = card.getAttribute('data-pdf') || '#';
+
+    if (certModalTitle) certModalTitle.textContent = title;
+    if (certModalSubtitle) certModalSubtitle.textContent = issuer;
+    if (certModalIframe) certModalIframe.src = pdfUrl;
+    if (certModalPdfBtn) certModalPdfBtn.href = pdfUrl;
+
+    certModal.classList.add('active');
+    certModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCertModal() {
+    if (!certModal) return;
+    certModal.classList.remove('active');
+    certModal.setAttribute('aria-hidden', 'true');
+    if (certModalIframe) certModalIframe.src = '';
+    document.body.style.overflow = '';
+  }
+
+  // Event delegation — works for both original and JS-cloned cards
+  if (certTrack) {
+    certTrack.addEventListener('click', (e) => {
+      const card = e.target.closest('.cert-card');
+      if (card && !card.getAttribute('aria-hidden')) openCertModal(card);
+    });
+  }
+
+
+  if (certModalClose) certModalClose.addEventListener('click', closeCertModal);
+  if (certModalOverlay) certModalOverlay.addEventListener('click', closeCertModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && certModal && certModal.classList.contains('active')) {
+      closeCertModal();
+    }
+  });
+
+  // ═══════════════════════════════════════════════════════
   // 1.6. TECH SLIDER CONTROLS (Manual Arrows + Auto Scroll)
   // ═══════════════════════════════════════════════════════
   const techWrapper = document.getElementById('techSliderWrapper');
