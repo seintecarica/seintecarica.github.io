@@ -38,9 +38,6 @@
   <!-- Devicon for tech logos -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
 
-  <!-- PDF.js para previsualización directa de PDFs -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -58,6 +55,7 @@
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#about" class="nav-link">Sobre mí</a></li>
+        <li><a href="#certificates" class="nav-link">Certificados</a></li>
         <li><a href="#experience" class="nav-link">Experiencia</a></li>
         <li><a href="#projects" class="nav-link">Proyectos</a></li>
         <li><a href="#tech" class="nav-link">Tecnologías</a></li>
@@ -171,10 +169,10 @@
   <section class="section" id="certificates">
     <div class="container">
       <h2 class="section-title animate-on-scroll">
-        <span class="section-number">02.</span> Certificados
+        <span class="section-number">02.</span> Certificados y Credenciales
       </h2>
-      <p class="section-subtitle animate-on-scroll">Documentos y certificaciones profesionales. Haz clic en cualquier
-        certificado para ver la previsualización directa en PDF o abrir el documento oficial.</p>
+      <p class="section-subtitle animate-on-scroll">Certificaciones profesionales y cursos validados en línea. Haz clic
+        en cualquier credencial para verificar la validez directa en Platzi u otra plataforma oficial.</p>
 
       <div class="cert-slider-outer animate-on-scroll">
         <button class="cert-slider-btn prev" id="certPrevBtn" aria-label="Anterior">
@@ -183,359 +181,472 @@
 
         <div class="cert-slider-wrapper" id="certSliderWrapper">
           <div class="cert-slider-track" id="certSliderTrack">
-            <!-- First Set (16 certificates) -->
-            <div class="cert-card"
-              data-pdf="assets/certificates/Certificado-Angular-17-Creacion-de-aplicaciones-web.pdf"
-              data-title="Certificado - Angular 17 - Creación de aplicaciones web"
-              data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Angular-17-Creacion-de-aplicaciones-web.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+
+            <!-- Credencial 01: Angular 17 -->
+            <div class="cert-card" data-title="Angular 17 - Creación de aplicaciones web" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Angular-17-Creacion-de-aplicaciones-web.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-angular"></i></div>
                 <h4 class="cert-title">Angular 17 - Creación de aplicaciones web</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificación Profesional</span>
-                <span class="cert-badge">PDF</span>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/curso/2274-course/diploma/detalle/" target="_blank"
+                  rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Angular-17-Creacion-de-aplicaciones-web.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-APIRest-con-Net.pdf"
-              data-title="Certificado 02" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-APIRest-con-Net.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 02: APIRest con .NET -->
+            <div class="cert-card" data-title="Certificado APIRest con .Net" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-APIRest-con-Net.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado APIRest con .Net</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-APIRest-con-Net.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-code"></i></div>
+                <h4 class="cert-title">APIRest con .NET</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Backend-con-NestJS.pdf"
-              data-title="Certificado 03" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-Backend-con-NestJS.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Backend con NestJS</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Backend-con-NestJS.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-APIRest-con-Net.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Consumo-de-APIs-REST-con-Angular.pdf"
-              data-title="Certificado 04" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Consumo-de-APIs-REST-con-Angular.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 03: Backend con NestJS -->
+            <div class="cert-card" data-title="Certificado Backend con NestJS" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Backend-con-NestJS.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Consumo de APIs REST con Angular</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Consumo-de-APIs-REST-con-Angular.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-server"></i></div>
+                <h4 class="cert-title">Backend con NestJS</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card"
-              data-pdf="assets/certificates/Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf"
-              data-title="Certificado 05" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso de Angular Componentes y Servicios</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Backend-con-NestJS.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-Api-Rest-con-Laravel.pdf"
-              data-title="Certificado 06" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Curso-de-Api-Rest-con-Laravel.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 04: Consumo de APIs REST con Angular -->
+            <div class="cert-card" data-title="Consumo de APIs REST con Angular" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Consumo-de-APIs-REST-con-Angular.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso de Api Rest con Laravel</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Curso-de-Api-Rest-con-Laravel.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-angular"></i></div>
+                <h4 class="cert-title">Consumo de APIs REST con Angular</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Angular.pdf"
-              data-title="Certificado 07" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Angular.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso de Fundamentos de Angular</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Curso-de-Fundamentos-de-Angular.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Consumo-de-APIs-REST-con-Angular.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card"
-              data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot.pdf"
-              data-title="Certificado 08" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 05: Angular Componentes y Servicios -->
+            <div class="cert-card" data-title="Angular Componentes y Servicios" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso de Fundamentos de Java Spring Boot</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot .pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-angular"></i></div>
+                <h4 class="cert-title">Angular: Componentes y Servicios</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-introduccion-a-Laravel-9.pdf"
-              data-title="Certificado 09" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Curso-de-introduccion-a-Laravel-9.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso de Introduccion a Laravel 9</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Curso-de-introduccion-a-Laravel-9.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-de-Angular-Componentes-y-Servicios.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-de-Postgresql.pdf"
-              data-title="Certificado 10" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-Curso-de-Postgresql.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 06: API Rest con Laravel -->
+            <div class="cert-card" data-title="API Rest con Laravel" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-de-Api-Rest-con-Laravel.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso de Postgresql</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Curso-de-Postgresql.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-laravel"></i></div>
+                <h4 class="cert-title">API Rest con Laravel</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Curso-profesional-de-Git-y-Github.pdf"
-              data-title="Certificado 11" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Curso-profesional-de-Git-y-Github.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Curso Profesional de Git y Github</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Curso-profesional-de-Git-y-Github.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-de-Api-Rest-con-Laravel.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Fundamentos-de-Docker.pdf"
-              data-title="Certificado 12" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Fundamentos-de-Docker.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 07: Fundamentos de Angular -->
+            <div class="cert-card" data-title="Fundamentos de Angular" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Angular.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Fundamentos de Docker</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Fundamentos-de-Docker.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-angular"></i></div>
+                <h4 class="cert-title">Fundamentos de Angular</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Fundamentos-de-NodeJS.pdf"
-              data-title="Certificado 13" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Fundamentos-de-NodeJS.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Fundamentos de NodeJS</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Fundamentos-de-NodeJS.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-de-Fundamentos-de-Angular.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Introduccion-a-Laravel.pdf"
-              data-title="Certificado 14" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Introduccion-a-Laravel.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 08: Java Spring Boot -->
+            <div class="cert-card" data-title="Fundamentos de Java Spring Boot" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Introduccion a Laravel</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Introduccion-a-Laravel.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-java"></i></div>
+                <h4 class="cert-title">Fundamentos de Java Spring Boot</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card"
-              data-pdf="assets/certificates/Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf"
-              data-title="Certificado 15" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Manejo de datos en Laravel con Eloquent ORM</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-de-Fundamentos-de-Java-Spring-Boot.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Certificado-Modulos-con-NestJS.pdf"
-              data-title="Certificado 16" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas" data-pdf="assets/certificates/Certificado-Modulos-con-NestJS.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 09: Laravel 9 -->
+            <div class="cert-card" data-title="Introducción a Laravel 9" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-de-introduccion-a-Laravel-9.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Módulos con NestJS</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i> Certificado-Módulos-con-NestJS.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-laravel"></i></div>
+                <h4 class="cert-title">Introducción a Laravel 9</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
               </div>
-            </div>
-
-            <div class="cert-card" data-pdf="assets/certificates/Wordpress-UC-581801cd-a76e-47fb-98b1-1a0a111f94ec.pdf"
-              data-title="Certificado 17" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Wordpress-UC-581801cd-a76e-47fb-98b1-1a0a111f94ec.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
-              </div>
-              <div class="cert-info">
-                <h4 class="cert-title">Certificado Wordpress Profesional 2025</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Wordpress-UC-581801cd-a76e-47fb-98b1-1a0a111f94ec.pdf</span>
-                <span class="cert-badge">PDF</span>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-de-introduccion-a-Laravel-9.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Elementor-UC-c775d1e3-1cfa-4c63-acc8-690f5f6dc655.pdf"
-              data-title="Certificado 18" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Elementor-UC-c775d1e3-1cfa-4c63-acc8-690f5f6dc655.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 10: PostgreSQL -->
+            <div class="cert-card" data-title="Curso de PostgreSQL" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-de-Postgresql.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-database"></i></div>
+                <h4 class="cert-title">Curso de PostgreSQL</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-de-Postgresql.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 11: Git y GitHub -->
+            <div class="cert-card" data-title="Curso Profesional de Git y GitHub" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Curso-profesional-de-Git-y-Github.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-github"></i></div>
+                <h4 class="cert-title">Curso Profesional de Git y GitHub</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Curso-profesional-de-Git-y-Github.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 12: Docker -->
+            <div class="cert-card" data-title="Fundamentos de Docker" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Fundamentos-de-Docker.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-docker"></i></div>
+                <h4 class="cert-title">Fundamentos de Docker</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Fundamentos-de-Docker.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 13: NodeJS -->
+            <div class="cert-card" data-title="Fundamentos de NodeJS" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Fundamentos-de-NodeJS.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-node-js"></i></div>
+                <h4 class="cert-title">Fundamentos de NodeJS</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Fundamentos-de-NodeJS.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 14: Laravel -->
+            <div class="cert-card" data-title="Introducción a Laravel" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Introduccion-a-Laravel.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-laravel"></i></div>
+                <h4 class="cert-title">Introducción a Laravel</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Introduccion-a-Laravel.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 15: Laravel Eloquent ORM -->
+            <div class="cert-card" data-title="Manejo de datos en Laravel con Eloquent ORM" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-laravel"></i></div>
+                <h4 class="cert-title">Laravel: Eloquent ORM</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Manejo-de-datos-en-Laravel-con-Eloquent-ORM.pdf"
+                  target="_blank" rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 16: NestJS Módulos -->
+            <div class="cert-card" data-title="Módulos con NestJS" data-issuer="Platzi"
+              data-pdf="assets/certificates/Certificado-Modulos-con-NestJS.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge platzi"><i class="fas fa-graduation-cap"></i> Platzi</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-cubes"></i></div>
+                <h4 class="cert-title">Módulos con NestJS</h4>
+                <span class="cert-issuer-text">Platzi &bull; 2024</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://platzi.com/p/rquisbert/" target="_blank" rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Certificado-Modulos-con-NestJS.pdf" target="_blank" rel="noopener"
+                  class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 17: WordPress -->
+            <div class="cert-card" data-title="WordPress Profesional 2025" data-issuer="Udemy"
+              data-pdf="assets/certificates/Wordpress-UC-581801cd-a76e-47fb-98b1-1a0a111f94ec.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge udemy"><i class="fas fa-award"></i> Udemy</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fab fa-wordpress"></i></div>
+                <h4 class="cert-title">WordPress Profesional 2025</h4>
+                <span class="cert-issuer-text">Udemy &bull; UC-581801cd</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://www.udemy.com/certificate/UC-581801cd-a76e-47fb-98b1-1a0a111f94ec/" target="_blank"
+                  rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Wordpress-UC-581801cd-a76e-47fb-98b1-1a0a111f94ec.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- Credencial 18: Elementor PRO -->
+            <div class="cert-card" data-title="Elementor PRO" data-issuer="Udemy"
+              data-pdf="assets/certificates/Elementor-UC-c775d1e3-1cfa-4c63-acc8-690f5f6dc655.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge udemy"><i class="fas fa-award"></i> Udemy</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-layer-group"></i></div>
                 <h4 class="cert-title">Certificado Elementor PRO</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Elementor-UC-c775d1e3-1cfa-4c63-acc8-690f5f6dc655.pdf</span>
-                <span class="cert-badge">PDF</span>
+                <span class="cert-issuer-text">Udemy &bull; UC-c775d1e3</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://www.udemy.com/certificate/UC-c775d1e3-1cfa-4c63-acc8-690f5f6dc655/" target="_blank"
+                  rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Elementor-UC-c775d1e3-1cfa-4c63-acc8-690f5f6dc655.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Liferay-UC-c28c6ee4-ed9a-4b2e-9a6f-adf1f57ab782.pdf"
-              data-title="Certificado 19" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Liferay-UC-c28c6ee4-ed9a-4b2e-9a6f-adf1f57ab782.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 19: Liferay Portal -->
+            <div class="cert-card" data-title="Liferay Portal" data-issuer="Udemy"
+              data-pdf="assets/certificates/Liferay-UC-c28c6ee4-ed9a-4b2e-9a6f-adf1f57ab782.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge udemy"><i class="fas fa-award"></i> Udemy</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-cubes"></i></div>
                 <h4 class="cert-title">Certificado Liferay Portal</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Liferay-UC-c28c6ee4-ed9a-4b2e-9a6f-adf1f57ab782.pdf</span>
-                <span class="cert-badge">PDF</span>
+                <span class="cert-issuer-text">Udemy &bull; UC-c28c6ee4</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://www.udemy.com/certificate/UC-c28c6ee4-ed9a-4b2e-9a6f-adf1f57ab782/" target="_blank"
+                  rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Liferay-UC-c28c6ee4-ed9a-4b2e-9a6f-adf1f57ab782.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
 
-            <div class="cert-card" data-pdf="assets/certificates/Moodle-UC-be0658c6-eedf-471e-a853-61c11e629df6.pdf"
-              data-title="Certificado 20" data-issuer="Certificación Profesional" data-year="2024">
-              <div class="cert-thumb-wrapper">
-                <canvas class="cert-canvas"
-                  data-pdf="assets/certificates/Moodle-UC-be0658c6-eedf-471e-a853-61c11e629df6.pdf"></canvas>
-                <div class="cert-fallback-icon"><i class="fas fa-file-pdf"></i></div>
-                <div class="cert-overlay">
-                  <span class="cert-zoom-btn"><i class="fas fa-search-plus"></i> Previsualizar PDF</span>
-                </div>
+            <!-- Credencial 20: Moodle 2025 -->
+            <div class="cert-card" data-title="Moodle 2025" data-issuer="Udemy"
+              data-pdf="assets/certificates/Moodle-UC-be0658c6-eedf-471e-a853-61c11e629df6.pdf">
+              <div class="cert-card-header">
+                <div class="cert-platform-badge udemy"><i class="fas fa-award"></i> Udemy</div>
+                <span class="cert-status-tag"><i class="fas fa-check-circle"></i> Verificado</span>
               </div>
-              <div class="cert-info">
+              <div class="cert-card-body">
+                <div class="cert-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
                 <h4 class="cert-title">Certificado Moodle 2025</h4>
-                <span class="cert-issuer"><i class="fas fa-file-pdf"></i>
-                  Moodle-UC-be0658c6-eedf-471e-a853-61c11e629df6.pdf</span>
-                <span class="cert-badge">PDF</span>
+                <span class="cert-issuer-text">Udemy &bull; UC-be0658c6</span>
+              </div>
+              <div class="cert-card-actions">
+                <a href="https://www.udemy.com/certificate/UC-be0658c6-eedf-471e-a853-61c11e629df6/" target="_blank"
+                  rel="noopener" class="cert-btn-verify">
+                  <span>Verificar en línea</span> <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="assets/certificates/Moodle-UC-be0658c6-eedf-471e-a853-61c11e629df6.pdf" target="_blank"
+                  rel="noopener" class="cert-btn-pdf" title="Ver PDF de respaldo">
+                  <i class="fas fa-file-pdf"></i> PDF
+                </a>
               </div>
             </div>
+
           </div>
         </div>
 

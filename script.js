@@ -62,13 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ═══════════════════════════════════════════════════════
-  // 1.5.5. CERTIFICATES SLIDER & PDF.JS PREVIEWS
+  // ═══════════════════════════════════════════════════════
+  // 1.5.5. CERTIFICATES SLIDER (Digital Credential Cards)
   // ═══════════════════════════════════════════════════════
   const certTrack = document.getElementById('certSliderTrack');
   const certPrevBtn = document.getElementById('certPrevBtn');
   const certNextBtn = document.getElementById('certNextBtn');
 
-  // — Clone cards for infinite loop (keeps HTML with only 16 cards) —
+  // — Clone cards for infinite loop —
   if (certTrack) {
     const originalCards = Array.from(certTrack.children);
     originalCards.forEach(card => {
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // — Pause/resume on hover (CSS handles :hover, but also support buttons) —
+  // — Pause/resume on hover / buttons —
   if (certPrevBtn && certNextBtn && certTrack) {
     certPrevBtn.addEventListener('click', () => {
       certTrack.classList.toggle('paused');
@@ -88,50 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Renderizado dinámico de la 1ª página de cada PDF con PDF.js en el canvas
-  if (window.pdfjsLib) {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    // Only select canvases inside original (non-cloned) cards
-    const originalCertCards = certTrack
-      ? Array.from(certTrack.querySelectorAll('.cert-card:not([aria-hidden]) .cert-canvas'))
-      : [];
-
-    originalCertCards.forEach((canvas, idx) => {
-      const pdfUrl = canvas.getAttribute('data-pdf');
-      if (!pdfUrl) return;
-
-      pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
-        pdf.getPage(1).then(page => {
-          const viewport = page.getViewport({ scale: 0.5 });
-          const context = canvas.getContext('2d');
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
-
-          const renderContext = { canvasContext: context, viewport: viewport };
-          page.render(renderContext).promise.then(() => {
-            canvas.classList.add('rendered');
-
-            // Mirror the rendered image to the cloned card's canvas
-            const clonedCards = Array.from(certTrack.querySelectorAll('.cert-card[aria-hidden]'));
-            if (clonedCards[idx]) {
-              const cloneCanvas = clonedCards[idx].querySelector('.cert-canvas');
-              if (cloneCanvas) {
-                cloneCanvas.width = canvas.width;
-                cloneCanvas.height = canvas.height;
-                cloneCanvas.getContext('2d').drawImage(canvas, 0, 0);
-                cloneCanvas.classList.add('rendered');
-              }
-            }
-          });
-        });
-      }).catch(() => {
-        // Mantiene el icono representativo de PDF si el archivo aún no está subido
-      });
-    });
-  }
-
-  // Visor Modal Lightbox con iFrame interactivo
+  // Visor Modal Lightbox (opcional para previsualización PDF de respaldo)
   const certModal = document.getElementById('certModal');
   const certModalOverlay = document.getElementById('certModalOverlay');
   const certModalClose = document.getElementById('certModalClose');
@@ -163,15 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (certModalIframe) certModalIframe.src = '';
     document.body.style.overflow = '';
   }
-
-  // Event delegation — works for both original and JS-cloned cards
-  if (certTrack) {
-    certTrack.addEventListener('click', (e) => {
-      const card = e.target.closest('.cert-card');
-      if (card && !card.getAttribute('aria-hidden')) openCertModal(card);
-    });
-  }
-
 
   if (certModalClose) certModalClose.addEventListener('click', closeCertModal);
   if (certModalOverlay) certModalOverlay.addEventListener('click', closeCertModal);
